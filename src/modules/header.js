@@ -22,8 +22,7 @@ export const header = (function() {
   const navigation = tools.createWithAttributes('nav', 'hidden-mobile');
   const menuItems = ['Home', 'About', 'Menu', 'Contact'];
   menuItems.forEach(navItem => {
-    const container = tools.createWithAttributes('div', 'menu-item');
-    container.textContent = navItem;
+    const container = tools.createWithAttributes('div', 'menu-item', null, navItem);
     navigation.appendChild(container);
   });
 
