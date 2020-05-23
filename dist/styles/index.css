@@ -146,3 +146,38 @@ nav {
         display: none;
     }
 }
+
+/* ---------------------------------------------------------------------------------------- */
+                                        /* HOME */
+/* ---------------------------------------------------------------------------------------- */
+
+#home {
+    position: absolute;
+    width: 80%;
+    min-width: 300px;
+    left: 10%;
+    top: 140px;
+    margin: 0 auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome {
+    padding: 10px;
+    width: 100%;
+    margin: 100px 0;
+    text-align: center;
+    color: #f54;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 2.8em;
+    border-radius: 20px;
+}
+
+@media (min-width: 992px) {
+    #welcome {
+        width: 60%;
+    }
+}
+

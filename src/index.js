@@ -1,8 +1,14 @@
-import {header} from './menu';
+import {header} from './modules/header';
+import {home} from './modules/home';
+import {about} from './modules/about';
+
+const pageElements = [header, home, about];
 
 const entryPoint = document.getElementById('content');
 
-entryPoint.appendChild(header);
+for (const element of pageElements) {
+  entryPoint.appendChild(element);
+}
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 768) {
@@ -10,3 +16,8 @@ window.addEventListener('resize', () => {
     document.querySelector('nav').classList.add('hidden-mobile');      
   }
 });
+
+
+
+
+

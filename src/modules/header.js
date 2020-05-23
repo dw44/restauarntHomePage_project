@@ -1,9 +1,8 @@
+import {tools} from './tools';
+
 export const header = (function() { 
   const root = document.createElement('header');
-
-  const logoContainer = document.createElement('div');
-  logoContainer.setAttribute('id', 'menu-logo');
-
+  const logoContainer = tools.createWithAttributes('div', null, 'menu-logo');
   const logo = document.createElement('img');
   const logoAttributes = [['src', './images/logo.png'], ['alt', 'Perkins']];
 
@@ -13,21 +12,17 @@ export const header = (function() {
 
   logoContainer.appendChild(logo);
 
-  const hamburger = document.createElement('div');
-  hamburger.setAttribute('id', 'hamburger');
+  const hamburger = tools.createWithAttributes('div', null, 'hamburger');
 
   for (let i = 1; i < 4; ++i) {
-    const bar = document.createElement('div');
-    bar.setAttribute('id', `hb-bar-${i}`);
+    const bar = tools.createWithAttributes('div', null, `hb-bar-${i}`);
     hamburger.appendChild(bar);
-  };
+  }
 
-  const navigation = document.createElement('nav');
-  navigation.classList.add('hidden-mobile');
+  const navigation = tools.createWithAttributes('nav', 'hidden-mobile');
   const menuItems = ['Home', 'About', 'Menu', 'Contact'];
   menuItems.forEach(navItem => {
-    const container = document.createElement('div');
-    container.classList.add('menu-item');
+    const container = tools.createWithAttributes('div', 'menu-item');
     container.textContent = navItem;
     navigation.appendChild(container);
   });
@@ -37,11 +32,8 @@ export const header = (function() {
     navigation.classList.toggle('hidden-mobile');
   });
 
-  root.appendChild(logoContainer);
-  root.appendChild(hamburger);
-  root.appendChild(navigation);
+  tools.addChildren(root, logoContainer, hamburger, navigation);
 
   return root;
-
 })();
 
