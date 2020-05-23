@@ -15,7 +15,6 @@ export const header = (function() {
 
   const hamburger = document.createElement('div');
   hamburger.setAttribute('id', 'hamburger');
-  hamburger.addEventListener('click', hamburgerClick);
 
   for (let i = 1; i < 4; ++i) {
     const bar = document.createElement('div');
@@ -33,6 +32,10 @@ export const header = (function() {
     navigation.appendChild(container);
   });
 
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navigation.classList.toggle('hidden-mobile');
+  });
 
   root.appendChild(logoContainer);
   root.appendChild(hamburger);
@@ -42,7 +45,3 @@ export const header = (function() {
 
 })();
 
-function hamburgerClick() {
-  document.getElementById('hamburger').classList.toggle('open');
-  document.querySelector('nav').classList.toggle('hidden-mobile');
-}
