@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/dw44/restauarntHomePage_project/issues"
   },
-  "homepage": "https://github.com/dw44/restauarntHomePage_project#readme"
+  "homepage": "https://github.com/dw44/restauarntHomePage_project#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
 }
