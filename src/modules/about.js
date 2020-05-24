@@ -11,12 +11,9 @@ export const about = (function() {
 
   const root = tools.createWithAttributes('section', 'hidden', 'about');
   const aboutCard = tools.createWithAttributes('div', null, 'about-card');
-  const heading = tools.createWithAttributes('h2');
-  const aboutUs = tools.createWithAttributes('p');
-
-  heading.textContent = headingText;
-  aboutUs.textContent = aboutText;
-
+  const heading = tools.createWithAttributes('h2', null, null, headingText);
+  const aboutUs = tools.createWithAttributes('p', null, null, aboutText);
+  
   tools.addChildren(aboutCard, heading, aboutUs);
   tools.addChildren(root, aboutCard);
 

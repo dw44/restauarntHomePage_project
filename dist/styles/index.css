@@ -244,6 +244,7 @@ nav {
     position: absolute;
     width: 80%;
     min-width: 300px;
+    min-height: 600px;
     left: 10%;
     top: 140px;
     margin: 0 auto;
@@ -313,6 +314,7 @@ nav {
 
 .contact-card {
     background-color: #fff;
+    min-width: 290px;
     border-radius: 20px;
     height: 30%;
     text-align: center;
